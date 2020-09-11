@@ -1,0 +1,10 @@
+{
+    "name": "tingying/framework",
+    "authors": [
+        {
+            "name": "yangzhaohang",
+            "email": "yangzhaohang@comsenz-service.com"
+        }
+    ],
+    "require": {}
+}
