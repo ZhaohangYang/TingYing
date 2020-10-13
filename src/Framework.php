@@ -1,9 +1,9 @@
 <?php
 
-namespace Core;
+namespace Hummingbird;
 
 use Symfony\Component\HttpKernel\HttpKernel;
 
-class Hummingbird extends HttpKernel
+class Framework extends HttpKernel
 {
 }

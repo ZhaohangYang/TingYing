@@ -1,6 +1,0 @@
-
-dashboard:
-    path: /dashboard
-    defaults: { 
-        _controller: 'App\Http\Controllers\DashboardController::index'
-    }

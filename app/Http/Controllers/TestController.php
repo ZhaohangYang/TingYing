@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class DashboardController
+class TestController
 {
 
     public function index(Request $request)
