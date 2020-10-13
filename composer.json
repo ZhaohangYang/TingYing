@@ -1,5 +1,5 @@
 {
-    "name": "tingying/framework",
+    "name": "hummingbird/framework",
     "authors": [
         {
             "name": "yangzhaohang",
@@ -8,7 +8,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "TingYing\\": "src/"
+            "App\\": "app/",
+            "Core\\": "core/"
         }
     },
     "require": {
@@ -18,6 +19,11 @@
         "nikic/fast-route": "^1.3",
         "symfony/event-dispatcher": "^5.1",
         "symfony/http-foundation": "^5.1",
-        "symfony/http-kernel": "^5.1"
+        "symfony/http-kernel": "^5.1",
+        "symfony/dependency-injection": "^5.1",
+        "symfony/config": "^5.1",
+        "symfony/yaml": "^5.1",
+        "symfony/routing": "^5.1",
+        "symfony/var-dumper": "^5.1"
     }
 }
