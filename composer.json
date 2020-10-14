@@ -9,7 +9,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Hummingbird\\":"src/"
+            "Hummingbird\\":"framework/"
         }
     },
     "require": {
@@ -19,6 +19,7 @@
         "symfony/http-kernel": "^5.1",
         "symfony/dependency-injection": "^5.1",
         "symfony/routing": "^5.1",
-        "symfony/var-dumper": "^5.1"
+        "symfony/var-dumper": "^5.1",
+        "symfony/console": "^5.1"
     }
 }
