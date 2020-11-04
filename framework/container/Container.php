@@ -22,8 +22,10 @@ $container->register('argument_resolver', HttpKernel\Controller\ArgumentResolver
 
 $container->register('listener.router', HttpKernel\EventListener\RouterListener::class)
     ->setArguments([new Reference('matcher'), new Reference('request_stack')]);
+
 $container->register('listener.response', HttpKernel\EventListener\ResponseListener::class)
     ->setArguments(['UTF-8']);
+
 $container->register('listener.exception', HttpKernel\EventListener\ErrorListener::class)
     ->setArguments(['App\Https\Controllers\ErrorController::exception']);
 
