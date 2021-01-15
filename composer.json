@@ -20,6 +20,7 @@
         "symfony/dependency-injection": "^5.1",
         "symfony/routing": "^5.1",
         "symfony/var-dumper": "^5.1",
-        "symfony/console": "^5.1"
+        "symfony/console": "^5.1",
+        "zhaohangyang/huoban_guzzlehttp": "^1.2"
     }
 }
