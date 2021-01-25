@@ -6,6 +6,8 @@ class CommonConfig
 {
     public static function getCommonConfig()
     {
-        return [];
+        return [
+            "cache_path" => BASE_PATH . "/runtime"
+        ];
     }
 }
