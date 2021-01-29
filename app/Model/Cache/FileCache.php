@@ -18,7 +18,6 @@ class FileCache extends CacheInterface
         $config = CommonConfig::getCommonConfig();
         $this->cache = new FilesystemAdapter('', 60 * 60, $config['cache_path']);
     }
-
     public static function getInstance()
     {
         if (!(self::$instance instanceof self)) {
@@ -26,24 +25,33 @@ class FileCache extends CacheInterface
         }
         return self::$instance;
     }
-
-    //克隆方法私有化，防止复制实例
     private function __clone()
     {
     }
-
+    public function set(string $key, callable $callback = null)
+    {
+        $this->list[$key] = $callback;
+        return $this->get($key, $callback);
+    }
     public function get(string $key, callable $callback = null)
     {
-        $callback = $this->list[$key] ?? $callback;
-        if (!$callback) {
+        $this->list[$key] = $callback ?: $this->list[$key];
+        if (!$this->list[$key])
             return null;
-        }
-        $this->list[$key] = $callback;
-        $value = $this->cache->get($key, $callback);
+        $value = $this->cache->get($key, $this->list[$key]);
         return $value;
     }
-
-    public function delete()
+    public function delete($key)
     {
+        $this->cache->delete($key);
+    }
+    public function getExample($key)
+    {
+        $value = FileCache::getInstance()->get('my_cache_key', function (ItemInterface $item) {
+            $item->expiresAfter(3600);
+            // ... do some HTTP request or heavy computations
+            $computedValue = 'foobar';
+            return $computedValue;
+        });
     }
 }
