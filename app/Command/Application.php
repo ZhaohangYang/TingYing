@@ -3,8 +3,8 @@
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-use Symfony\Component\Console\Application;
 use App\Command\CreateUserCommand;
+use Symfony\Component\Console\Application;
 
 $application = new Application();
 

@@ -1,5 +1,4 @@
 <?php
-// src/Command/CreateUserCommand.php
 namespace App\Command;
 
 use Symfony\Component\Console\Command\Command;
@@ -14,11 +13,11 @@ class CreateUserCommand extends Command
     protected function configure()
     {
         $this
-            // the short description shown while running "php bin/console list"
-            ->setDescription('Creates a new user.')
+        // the short description shown while running "php bin/console list"
+        ->setDescription('Creates a new user.')
 
-            // the full command description shown when running the command with
-            // the "--help" option
+        // the full command description shown when running the command with
+        // the "--help" option
             ->setHelp('This command allows you to create a user...');
         echo 'a';
     }
